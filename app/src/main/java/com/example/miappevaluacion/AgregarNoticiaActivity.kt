@@ -18,17 +18,19 @@ class AgregarNoticiaActivity : AppCompatActivity() {
         val etBajada = findViewById<EditText>(R.id.etBajada)
         val etAutor = findViewById<EditText>(R.id.etAutor)
         val etCuerpo = findViewById<EditText>(R.id.etCuerpo)
+        val etUrlImagen = findViewById<EditText>(R.id.etUrlImagen)
         val btnGuardar = findViewById<Button>(R.id.btnGuardarNoticia)
-        val btnVolver = findViewById<Button>(R.id.btnVolverNoticia) // Botón Nuevo
+        val btnVolver = findViewById<Button>(R.id.btnVolverNoticia)
 
         btnGuardar.setOnClickListener {
             val titulo = etTitulo.text.toString()
             val bajada = etBajada.text.toString()
             val autor = etAutor.text.toString()
             val cuerpo = etCuerpo.text.toString()
+            val urlImagen = etUrlImagen.text.toString()
 
             if (titulo.isEmpty() || bajada.isEmpty() || autor.isEmpty() || cuerpo.isEmpty()) {
-                mostrarAlerta("Error", "Completa todos los campos")
+                mostrarAlerta("Error", "Completa los campos obligatorios (Título, Bajada, Autor, Cuerpo)")
                 return@setOnClickListener
             }
 
@@ -37,7 +39,8 @@ class AgregarNoticiaActivity : AppCompatActivity() {
                 "bajada" to bajada,
                 "autor" to autor,
                 "cuerpo" to cuerpo,
-                "fecha" to Date()
+                "fecha" to Date(),
+                "imagenUrl" to urlImagen
             )
 
             FirebaseFirestore.getInstance().collection("noticias")

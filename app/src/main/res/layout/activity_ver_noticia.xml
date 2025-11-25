@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    tools:context=".VerNoticiaActivity">
+    android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,43 +13,81 @@
             android:id="@+id/tvTituloDetalle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="26sp"
+            android:textSize="28sp"
             android:textStyle="bold"
+            android:textColor="#000000"
             android:text="Título de la Noticia"
             android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvBajadaDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resumen o bajada importante..."
+            android:textSize="18sp"
+            android:textStyle="italic"
+            android:textColor="#444444"
+            android:layout_marginBottom="16dp"/>
 
         <TextView
             android:id="@+id/tvAutorDetalle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Por: Autor"
-            android:textStyle="italic"
-            android:textColor="#555555"
-            android:layout_marginBottom="16dp"/>
+            android:textSize="12sp"
+            android:textColor="#777777"
+            android:layout_marginBottom="12dp"/>
 
-        <TextView
-            android:id="@+id/tvBajadaDetalle"
+        <ImageView
+            android:id="@+id/ivImagenDetalle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Resumen..."
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:background="#EEEEEE"
+            android:layout_marginBottom="24dp"/>
 
         <TextView
             android:id="@+id/tvCuerpoDetalle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Contenido completo..."
+            android:text="Aquí va todo el contenido de la noticia..."
             android:textSize="16sp"
-            android:lineSpacingExtra="4dp"/>
+            android:lineSpacingExtra="4dp"
+            android:textColor="#222222"/>
 
-        <Button
-            android:id="@+id/btnVolver"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Volver"
-            android:layout_marginTop="32dp"/>
+            android:orientation="horizontal"
+            android:layout_marginTop="40dp"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/btnVolver"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Volver"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnEditar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Editar"
+                android:backgroundTint="#2196F3"
+                android:layout_marginEnd="4dp"/>
+
+            <Button
+                android:id="@+id/btnEliminar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Borrar"
+                android:backgroundTint="#D32F2F"/>
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

@@ -2,7 +2,7 @@ package com.example.miappevaluacion
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +21,8 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val fabAgregar = findViewById<FloatingActionButton>(R.id.fabAgregar)
-        val btnLogout = findViewById<Button>(R.id.btnLogout)
+        // AHORA ES ImageButton
+        val btnLogout = findViewById<ImageButton>(R.id.btnLogout)
         rvNoticias = findViewById(R.id.rvNoticias)
 
         rvNoticias.layoutManager = LinearLayoutManager(this)
@@ -32,6 +33,7 @@ class HomeActivity : AppCompatActivity() {
             intent.putExtra("bajada", noticia.bajada)
             intent.putExtra("cuerpo", noticia.cuerpo)
             intent.putExtra("autor", noticia.autor)
+            intent.putExtra("imagenUrl", noticia.imagenUrl)
             startActivity(intent)
         }
         rvNoticias.adapter = adapter
