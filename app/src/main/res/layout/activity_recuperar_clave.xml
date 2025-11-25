@@ -6,8 +6,24 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
     tools:context=".RecuperarClaveActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recuperar Clave"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp"/>
 
     <EditText
         android:id="@+id/etEmailRecuperar"
@@ -21,6 +37,13 @@
         android:id="@+id/btnEnviarRecuperacion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enviar Correo de Recuperación"/>
+        android:text="Enviar Correo de Recuperación"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnVolverRecuperar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Volver"/>
 
 </LinearLayout>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".VerNoticiaActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTituloDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:text="Título de la Noticia"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:id="@+id/tvAutorDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Por: Autor"
+            android:textStyle="italic"
+            android:textColor="#555555"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvBajadaDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Resumen..."
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:id="@+id/tvCuerpoDetalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contenido completo..."
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp"/>
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Volver"
+            android:layout_marginTop="32dp"/>
+
+    </LinearLayout>
+</ScrollView>
