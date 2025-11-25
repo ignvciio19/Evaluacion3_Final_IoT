@@ -15,9 +15,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:background="?attr/selectableItemBackgroundBorderless"
-        android:src="@android:drawable/ic_menu_revert"
+        android:src="@drawable/ic_usuario"
         app:tint="#FFFFFF"
-        android:contentDescription="Salir" />
+        android:contentDescription="Perfil Usuario" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvNoticias"

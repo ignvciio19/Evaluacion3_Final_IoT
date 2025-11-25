@@ -3,6 +3,7 @@ package com.example.miappevaluacion
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -21,7 +22,6 @@ class HomeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_home)
 
         val fabAgregar = findViewById<FloatingActionButton>(R.id.fabAgregar)
-        // AHORA ES ImageButton
         val btnLogout = findViewById<ImageButton>(R.id.btnLogout)
         rvNoticias = findViewById(R.id.rvNoticias)
 
@@ -44,10 +44,17 @@ class HomeActivity : AppCompatActivity() {
         }
 
         btnLogout.setOnClickListener {
-            FirebaseAuth.getInstance().signOut()
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
-            finish()
+            val builder = AlertDialog.Builder(this)
+            builder.setTitle("Cerrar Sesión")
+            builder.setMessage("¿Estás seguro de que quieres salir?")
+            builder.setPositiveButton("Sí, salir") { _, _ ->
+                FirebaseAuth.getInstance().signOut()
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+            }
+            builder.setNegativeButton("Cancelar", null)
+            builder.show()
         }
     }
 

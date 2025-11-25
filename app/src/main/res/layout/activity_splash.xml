@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3F2FD"
+    android:background="#0D47A1"
     tools:context=".SplashActivity">
 
     <ImageView
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/ic_logo_app"
         android:layout_centerInParent="true" />
 
 </RelativeLayout>

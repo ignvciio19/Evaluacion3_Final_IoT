@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E3F2FD"
+    android:background="#0D47A1"
     android:padding="24dp">
 
     <LinearLayout
@@ -30,7 +30,7 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:src="@mipmap/ic_launcher"
+                    android:src="@drawable/ic_logo_app"
                     android:layout_marginBottom="16dp"/>
 
                 <TextView
@@ -41,6 +41,15 @@
                     android:textStyle="bold"
                     android:textColor="#0D47A1"
                     android:layout_marginBottom="32dp"/>
+
+                <EditText
+                    android:id="@+id/etNombreRegistro"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Nombre de Usuario"
+                    android:inputType="textPersonName"
+                    android:background="@android:drawable/edit_text"
+                    android:layout_marginBottom="16dp"/>
 
                 <EditText
                     android:id="@+id/etEmailRegistro"
